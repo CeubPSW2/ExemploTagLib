@@ -7,17 +7,25 @@ package model;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 /**
  *
  * @author alexandretorres
  */
+@Entity
 public class Cliente {
+    @Id
+    @GeneratedValue
     private int id;
     private String nome;
     private String cpf;
     private boolean ativo;
 
+    public Cliente(){}
+    
     public Cliente(int id, String nome, String cpf) {
         this.id = id;
         this.nome = nome;
